@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Re-Architecting the Search Page — Krista Day</title>
+<meta name="description" content="Sun Country Airlines: re-architecting the search results and dynamic bundle experience. +51% mobile conversion, +34% desktop, −15% exit rate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N132ZZHLZH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N132ZZHLZH');
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="blob" aria-hidden="true"></span>
+      <span><span class="nm">Krista Day</span><span class="rl">Principal UX / CX</span></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="navlinks" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li class="cta-li"><a class="nav-cta" href="contact.html">Let's talk</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="case-hero">
+    <div class="wrap">
+      <p class="crumb rv"><a href="work.html">Work</a> &nbsp;/&nbsp; Case study</p>
+      <span class="eyebrow rv">Sun Country Airlines · E-commerce · Responsive IA</span>
+      <h1 class="rv">Re-Architecting the <span class="swash">Search Page
+        <svg class="underline" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M4 9 C 70 2, 150 12, 296 5"/></svg>
+      </span></h1>
+      <p class="lede rv" style="margin-top:24px">A booking engine that sells two products at once is a great value proposition and a brutal interface problem. This is how we made it legible — down to 320px.</p>
+
+      <dl class="meta-strip rv">
+        <div><dt>My role</dt><dd>Principal UX Architect &amp; Lead Product Designer</dd></div>
+        <div><dt>Scope</dt><dd>Strategy, IA, interaction design, cross-platform UI systems, design-to-dev handoff, usability testing</dd></div>
+        <div><dt>Platforms</dt><dd>Web — responsive desktop &amp; mobile</dd></div>
+        <div><dt>Tools</dt><dd>Sketch, Adobe Creative Suite, Sketch Cloud, Trello</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:clamp(24px,3vw,40px)">
+    <div class="wrap">
+      <figure class="rv" style="margin-top:0">
+        <img src="assets/img/suncountry-tablet.jpg" alt="A tablet on a wooden table showing the redesigned Sun Country search results page with flights-only and flight-plus-hotel package options">
+        <figcaption>The redesigned Search Results Page for suncountry.com. Two product types, one query, and an interface that tells you at a glance which itinerary you're building.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="narrow prose">
+
+      <div class="rv">
+        <span class="eyebrow">Executive summary</span>
+        <h2>Two products, one query</h2>
+        <p>Sun Country operates a hybrid booking engine that evaluates and presents both <strong>Flight-Only</strong> and <strong>Flight + Hotel Package</strong> options concurrently during a single round-trip query. The dynamic comparison model is a genuine differentiator — users can toggle prices without re-initiating the search — but it introduced significant cognitive load, pricing ambiguity and dense UI, especially on mobile.</p>
+        <p>As Lead Designer I redesigned the core Search Results Page architecture: simplifying dynamic bundle calculations, modernizing date-comparison interactions, and establishing a fully responsive UI system optimized down to <strong>320px screens</strong>.</p>
+      </div>
+
+      <div class="callout rv">
+        <h3>Key outcomes</h3>
+        <div class="outcomes">
+          <div><b>+51%</b><span>Mobile search-to-sale conversion</span></div>
+          <div><b>+34%</b><span>Desktop search-to-sale conversion</span></div>
+          <div><b>−15%</b><span>Exit rate across funnel entry points</span></div>
+          <div><b>−15%</b><span>Time on page — faster decisions</span></div>
+        </div>
+      </div>
+
+      <div class="rv">
+        <h2>The strategic challenge</h2>
+        <p>Exposing simultaneous flight and package data creates a balancing act across three dimensions:</p>
+        <ul>
+          <li><strong>Information density &amp; comparison</strong> — displaying two distinct product types with overlapping attributes without cluttering the screen or confusing the customer</li>
+          <li><strong>Dynamic pricing transparency</strong> — bundles obscure individual item costs, so the system had to communicate price differences clearly as selections changed across legs and room tiers</li>
+          <li><strong>Cross-device scale</strong> — parity for high-density transactional data from 320px phones to large desktop displays</li>
+        </ul>
+      </div>
+
+      <div class="rv">
+        <h2>Discovery &amp; research operations</h2>
+        <ol class="steps">
+          <li>
+            <h4>Heuristic evaluations &amp; competitor audits</h4>
+            <p>Benchmarked airlines and online travel agencies with a focus on cabin class treatments, mobile layout adaptations and date-change mechanics.</p>
+          </li>
+          <li>
+            <h4>Moderated usability &amp; concept testing</h4>
+            <p>Surfaced the central pain point: users repeatedly struggled to recognize whether they were currently building a standalone flight itinerary or a bundled package.</p>
+          </li>
+          <li>
+            <h4>Quantitative feedback loops</h4>
+            <p>Analyzed customer feedback channels to target specific drop-off patterns in the legacy selection flow.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="pull rv">The fix wasn't fewer options. It was never letting you lose track of which one you're in.</div>
+
+      <div class="rv">
+        <h2>Architectural &amp; interaction solutions</h2>
+
+        <h3>01 · Dual-path toggle architecture</h3>
+        <p>High-visibility segmented control tabs at the top of the flow establish instant clarity on landing. Explicit state indicators — including radio-button iconography inside the tabbed cards — visually reinforce selection state and prevent accidental cross-shopping confusion.</p>
+      </div>
+
+      <figure class="rv">
+        <img src="assets/img/suncountry-toggle.jpg" alt="Close-up of the toggle between Flights Only and Flight plus Hotel Packages, each showing coach and first class starting fares, with a Best Value ribbon on the package card">
+        <figcaption>The dual-path toggle. Per-person starting fares for both paths are visible at once, so the comparison happens without a state change.</figcaption>
+      </figure>
+
+      <div class="narrow prose rv" style="padding-inline:0">
+        <h3>02 · Sequential decision scaffolding</h3>
+        <p>Combining departing flights, returning flights and multi-tier hotel selection into a single viewport risks overwhelming users. Structural headers dynamically summarize route and duration context while chunking the decision into steps: <strong>Departing → Returning → Package options</strong>.</p>
+
+        <h3>03 · Inline fare comparison — the Price Compare Calendar</h3>
+        <p>Instead of forcing a full search reload to check adjacent travel dates, I architected an expandable, inline fare-comparison calendar ribbon. Selecting a new date dynamically updates only the affected result modules, keeping the user anchored in their current session context.</p>
+      </div>
+
+      <figure class="rv">
+        <img src="assets/img/suncountry-calendar.jpg" alt="The expanded Price Compare Calendar ribbon showing seven days of fares, with unavailable days greyed out and the selected Friday highlighted">
+        <figcaption>The expanded Price Compare Calendar ribbon. Unavailable dates stay visible rather than disappearing — absence of a fare is information too.</figcaption>
+      </figure>
+
+      <div class="narrow prose rv" style="padding-inline:0">
+        <h3>04 · Explicit micro-interactions &amp; group pricing</h3>
+        <ul>
+          <li><strong>Selection mechanics</strong> — legacy radio buttons replaced with dedicated call-to-action selection buttons displaying both per-person costs and calculated group totals</li>
+          <li><strong>Conditional funnel advancement</strong> — dynamic CTAs based on context: flight-only shoppers routed directly to checkout via a sticky bottom bar, package shoppers routed to hotel room configuration</li>
+        </ul>
+      </div>
+
+      <figure class="rv">
+        <img src="assets/img/suncountry-srp-full.jpg" alt="The full redesigned search results page in flights-only mode: dual-path toggle at the top, departing flight block with the price compare calendar expanded, then the returning flight block and a continue button">
+        <figcaption>The complete page in flights-only mode. Departing and returning legs are chunked into their own blocks, each with its own collapsible Price Compare Calendar and coach / first class columns — so the comparison stays local to the decision being made.</figcaption>
+      </figure>
+
+      <div class="callout blushy rv">
+        <h3>Cross-functional delivery &amp; distributed execution</h3>
+        <p style="margin-top:10px"><strong>Design system handoff:</strong> robust component specifications, responsive design patterns and interactive micro-states documented in Sketch.</p>
+        <p style="margin-top:10px"><strong>Remote engineering collaboration:</strong> partnered closely with remote engineering teams via Sketch Cloud and structured design specs to ensure high-fidelity implementation across desktop and mobile breakpoints.</p>
+      </div>
+
+      <div class="rv">
+        <h3>What I'd carry forward</h3>
+        <p>Density isn't the enemy — ambiguity is. Every point of conversion we gained came from making state explicit, not from removing information.</p>
+      </div>
+
+      <div class="nextprev rv">
+        <a class="textlink" href="work-generative-ai.html"><span aria-hidden="true">←</span> Architecting Generative Intelligence</a>
+        <a class="textlink" href="work.html">All work <span aria-hidden="true">→</span></a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <span>© 2026 Krista Day — Principal UX/CX Designer</span>
+    <nav aria-label="Footer">
+      <a href="work.html">Work</a><a href="about.html">About</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
