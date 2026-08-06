@@ -419,3 +419,26 @@ figcaption{margin-top:14px;font-family:var(--mono);font-size:.72rem;letter-spaci
   body{background:#fff}
   .card,.panel,.ap,.shot,figure img{box-shadow:none;break-inside:avoid}
 }
+
+/* =========================================================
+   Mobile scroll fixes — stop the page extending past content
+   ========================================================= */
+
+/* body-only overflow-x doesn't clip on mobile: the scroll
+   container is <html>. Clip both, and keep every band inside. */
+html{overflow-x:clip;max-width:100%}
+body{overflow-x:clip;max-width:100%;position:relative}
+main,.sec,.hero,footer.site-foot{max-width:100%}
+
+/* the portrait stickers hang outside their box — contain them */
+.hero{overflow:hidden}
+.portrait{max-width:100%}
+
+/* fixed backgrounds are unreliable on iOS and can add phantom
+   scroll height; use a normal background on touch devices */
+@media(max-width:900px){
+  body{background-attachment:scroll}
+}
+
+/* nothing should sit below the footer */
+footer.site-foot{margin-bottom:0}
