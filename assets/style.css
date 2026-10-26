@@ -405,13 +405,15 @@ figcaption{margin-top:14px;font-family:var(--mono);font-size:.72rem;letter-spaci
 .foot nav{display:flex;gap:16px;flex-wrap:wrap}
 
 /* ---------------- reveal ---------------- */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1)}
-.rv.in{opacity:1;transform:none}
+/* Reveal is opt-in: site.js adds .js-reveal to <html> before observing.
+   If the script never runs, nothing is hidden and the page reads normally. */
+.js-reveal .rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1)}
+.js-reveal .rv.in{opacity:1;transform:none}
 
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
-  .rv{opacity:1;transform:none}
+  .js-reveal .rv{opacity:1;transform:none}
   .shot.tilt{transform:none}
 }
 @media print{
@@ -497,3 +499,32 @@ footer.site-foot{margin-bottom:0}
 .rec.feat blockquote p:first-child{margin-top:0}
 @media(max-width:820px){.rec.feat blockquote{columns:1}}
 .tl-sub{font-size:.92rem;color:var(--ink-soft);line-height:1.4;margin:-2px 0 2px}
+
+/* =========================================================
+   Contrast corrections — small text to WCAG AA (4.5:1).
+   Display-size type keeps the lighter accents (needs 3:1).
+   ========================================================= */
+:root{
+  --ink-faint:#7A6B5E;          /* 4.78:1 on cream, was 3.81:1 */
+  --sage-deep:#4A6650;          /* 5.19:1 on sage-soft, 6.25:1 on white */
+}
+
+/* small uppercase labels: use the deeper terracotta */
+.eyebrow,
+.org,
+.card .co,
+.panel h4,
+.meta-strip dt,
+.tl-org,
+.mb h4,
+.rec .role{color:var(--terra-deep)}
+
+/* keep the light accents where the type is large enough to qualify */
+.sec.dark .eyebrow,
+.contact-wrap .eyebrow{color:var(--gold)}
+
+/* tags and chips */
+.tag.hot{background:var(--terra-deep)}          /* white on it: 6.48:1 */
+.tag.cool{color:var(--sage-deep)}               /* 5.19:1 on sage-soft */
+.card .kick,
+.skillgroup h4{color:var(--sage-deep)}          /* 6.25:1 on white */

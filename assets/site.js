@@ -33,6 +33,9 @@
   });
 
   // ---- scroll reveal ----
+  // Opt in only once JS is confirmed running, so a failed/blocked script
+  // can never leave the page invisible.
+  document.documentElement.classList.add('js-reveal');
   var els = document.querySelectorAll('.rv');
   if (!('IntersectionObserver' in window)) {
     Array.prototype.forEach.call(els, function (e) { e.classList.add('in'); });
