@@ -496,3 +496,4 @@ footer.site-foot{margin-bottom:0}
 .rec.feat blockquote p{break-inside:avoid}
 .rec.feat blockquote p:first-child{margin-top:0}
 @media(max-width:820px){.rec.feat blockquote{columns:1}}
+.tl-sub{font-size:.92rem;color:var(--ink-soft);line-height:1.4;margin:-2px 0 2px}
